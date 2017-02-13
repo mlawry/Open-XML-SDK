@@ -83,3 +83,31 @@ Building with Mono
 - `make -f Makefile-Linux-Mono build`
 - Find libraries in the folder: ./build/OpenXmlSdkLib
 - [Screen-Cast: Using the Open XML SDK on Linux using Mono](http://openxmldeveloper.org/blog/b/openxmldeveloper/archive/2014/07/03/screen-cast-using-open-xml-sdk-on-linux-using-mono.aspx)
+
+
+Description of the Projects
+===========================
+
+Copied from http://openxmldeveloper.org/discussions/development_tools/f/38/p/8480/164607.aspx
+
+You can build the Open-Xml-Sdk using the WB solution and projects.  This builds the open source Open-Xml-Sdk with the old System.IO.Packaging in the WindowsBase assembly.  This is more or less OK so long as you are not building a web front end, a SharePoint app, or a high-performance threaded app.
+
+All of the XUnit tests are run with both this library, and the library built with the new open source System.IO.Packaging.
+
+In the Open-XML-SDK.sln file, there are references to four projects:
+
+    DocumentFormat.OpenXml
+    DocumentFormat.OpenXml.Tests
+    DocumentFormat.OpenXml.WB
+    DocumentFormat.OpenXml.WB.Tests
+    System.IO.Packaging
+    System.IO.Packaging.Tests
+
+The System.IO.Packaging project contains the new System.IO.Packaging implementation, which works with .NET 4.5 and above only, because of a dependency on System.IO.Compression, certain classes of which are available only in 4.5 and above.
+
+System.IO.Packaging.Tests are the XUnit tests for System.IO.Packaging, of course.
+
+DocumentFormat.OpenXml.WB builds against the System.IO.Packaging in the WindowsBase assembly.  The DicumentFormat.OpenXml.WB.Tests are linked source files to DocumentFormat.OpenXml.Tests, and test out the basic functionality of the Open-Xml-Sdk when built in that fashion.  You can build with .NET 3.5 and above when building with the WindowsBase assembly.
+
+Cheers, Eric
+

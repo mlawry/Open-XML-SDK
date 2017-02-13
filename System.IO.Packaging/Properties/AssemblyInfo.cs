@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Security;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -9,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("System.IO.Packaging")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft Open Technologies, Inc.")]
-[assembly: AssemblyProduct("System.IO.Packaging")]
+[assembly: AssemblyProduct("System.IO.Packaging https://github.com/mlawry/Open-XML-SDK commit 3f36da8")]
 [assembly: AssemblyCopyright("© 2015 Microsoft Open Technologies, Inc.  Licensed under the Apache License, Version 2.0.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -35,3 +36,6 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
+[assembly: SecurityRules(SecurityRuleSet.Level2)]
+[assembly: SecurityTransparent]

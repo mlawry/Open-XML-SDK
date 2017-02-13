@@ -40,6 +40,12 @@
     <DocumentationFile>bin\Release\DocumentFormat.OpenXml.XML</DocumentationFile>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Binder OpenXMLSDK.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -253,6 +259,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Binder OpenXMLSDK.snk" />
     <None Include="src\GeneratedCode\O12SchemaConstraintDatas.bin" />
     <None Include="src\GeneratedCode\O14SchemaConstraintDatas.bin" />
     <None Include="src\GeneratedCode\O15SchemaConstraintDatas.bin" />

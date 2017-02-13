@@ -4,8 +4,8 @@ using System;
 using System.Security.Permissions;
 using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("ofapiTest")]
-[assembly: InternalsVisibleTo("SdbBuilder")]
+//[assembly: InternalsVisibleTo("ofapiTest")]
+//[assembly: InternalsVisibleTo("SdbBuilder")]
 [module: CLSCompliant(true)]
 
 namespace DocumentFormat.OpenXml.Packaging
